@@ -1,0 +1,14 @@
+{
+    "tap_one": {
+        "name": "test",
+        "state": 1.6
+    },
+    "tap_two": {
+        "name": "test2",
+        "state": 13.0
+    },
+    "tap_three": {
+        "name": "test3",
+        "state": 3.3
+    }
+}

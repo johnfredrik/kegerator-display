@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/static/homebrew.css">
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+</head>
+
+{% macro heading(arg) %}
+    {% if arg.state < 20.00 %}
+        <div class="bar bar-critical" style='height:{{arg.state}}%;'></div>
+    {% else if arg.state < 40.00 %}
+        <div class="bar bar-warning" style='height:{{arg.state}}%;'></div>
+    {% else %}
+        <div class="bar" style='height:{{arg.state}}%;'></div>
+    {% endif %}
+{% endmacro %}
+    
+
+<body>
+    <h1>Beer left in kegerator</h1>
+    <div class="group">
+        <div class=tap_one>
+            <div>{{tap_one.name|e }}</div>
+            <div class="loadbar">    
+                {% call heading(tap_one) %}
+            </div>
+            <div class="volume">{{tap_one.volume_left}}L</div>
+        </div>
+        <div class=tap_two>
+            <div>{{tap_two.name|e }}</div>
+            <div class="loadbar">    
+                {% call heading(tap_two) %}
+            </div>
+            <div class="volume">{{tap_two.volume_left}}L</div>
+        </div>
+        <div class=tap_three>
+            <div>{{tap_three.name|e }}</div>
+            <div class="loadbar">    
+                {% call heading(tap_three) %}
+            </div>
+            <div class="volume">{{tap_three.volume_left}}L</div>
+        </div>
+    </div>
+</body>
+<script>
+    setTimeout(function(){
+       window.location.reload(1);
+    }, 10000)
+</script>
+</html>
+    

@@ -1,0 +1,77 @@
+h1 {
+    margin: 10px;
+    font-family: "Gill Sans", sans-serif;
+    text-align: center;
+}
+
+body {
+    font-size: 32px;
+    font-family: "Gill Sans", sans-serif;
+    background-color:  #f4f6f7;
+
+}
+
+.group {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: stretch;
+    width: 1024px;
+    height: 768px;
+   
+  }
+  
+  .tap_one {
+    margin: 50px;
+  }
+  
+  .tap_two {
+    margin: 50px;
+    margin-top: 100px;
+  }
+  
+  .tap_three {
+    margin: 50px;
+  }
+
+  .loadbar
+  {
+       margin-top: 20px;
+       width:100px;
+       height:250px;
+       background-color:#fff;
+       border:1px solid #ccc;
+       position:relative; 
+       border-radius: 10px 10px 10px 10px;
+  }
+  .bar
+  {
+      width:100%;
+      display:block;        
+      font-family:arial; 
+      text-align: center;
+      background-color: #3498db;
+      color:#fff;       
+      position:absolute;
+      bottom:0;     
+      border-radius: 0px 0px 10px 10px;
+  }
+
+  .bar-warning {
+    background-color:#f4d03f
+    ;   
+  }
+
+  .bar-critical {
+      background-color:  #e74c3c;
+  }
+
+  .hide {
+      display: none;
+  }
+  
+  .volume {
+    text-align: center;
+  }

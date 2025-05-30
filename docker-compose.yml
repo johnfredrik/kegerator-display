@@ -1,0 +1,9 @@
+version: "3.7"
+services: 
+  kegerator-display:
+    image: johnfredrik/kegerator-display
+    restart: unless-stopped
+    ports:
+      - 9191:8080
+    volumes:
+      - /Users/johnfredrik/Projects/kegerator-display/data:/data
