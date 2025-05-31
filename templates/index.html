@@ -3,7 +3,8 @@
 <head>
     <meta name="robots" content="noindex">
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="/static/homebrew.css">
+    <!-- <link rel="stylesheet" href="/static/homebrew.css"> -->
+    <link rel="stylesheet" href="/static/tap.css">
     <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
 </head>
 
@@ -21,26 +22,42 @@
 <body>
     <h1>Beer left in kegerator</h1>
     <div class="group">
-        <div class=tap_one>
-            <div>{{tap_one.name|e }}</div>
-            <div class="loadbar">    
-                {% call heading(tap_one) %}
-            </div>
-            <div class="volume">{{tap_one.volume_left}}L</div>
+        <div class="row">
+        <div class="tap">
+        <div class="title">{{tap_one.name|e }}</div>
+        <div class=glass>
+            <div class="foam"></div>
+            <div class="beer"></div>
+            <div class="bubble1"></div>
+            <div class="bubble2"></div>
+            <div class="bubble3"></div>
+            <div class="value">{{tap_one.volume_left}}L</div>
+         </div>
         </div>
-        <div class=tap_two>
-            <div>{{tap_two.name|e }}</div>
-            <div class="loadbar">    
-                {% call heading(tap_two) %}
-            </div>
-            <div class="volume">{{tap_two.volume_left}}L</div>
+        <div class="tap">
+        <div class="title">{{tap_two.name|e }}</div>
+        <div class=glass>
+            <div class="foam"></div>
+            <div class="beer"></div>
+            <div class="bubble1"></div>
+            <div class="bubble2"></div>
+            <div class="bubble3"></div>
+            <div class="value">{{tap_two.volume_left}}L</div>
+         </div>
         </div>
-        <div class=tap_three>
-            <div>{{tap_three.name|e }}</div>
-            <div class="loadbar">    
-                {% call heading(tap_three) %}
-            </div>
-            <div class="volume">{{tap_three.volume_left}}L</div>
+        </div>
+        <div class="row">
+        <div class="tap">
+        <div class="title">{{tap_three.name|e }}</div>
+        <div class=glass>
+            <div class="foam"></div>
+            <div class="beer" style="height: 20%; background:rgb(203, 98, 0); z-index=1"></div>
+            <div class="bubble1"></div>
+            <div class="bubble2"></div>
+            <div class="bubble3"></div>
+            <div class="value">{{tap_three.volume_left}}L</div>
+         </div>
+        </div>
         </div>
     </div>
 </body>
